@@ -1,6 +1,6 @@
 /*
-SPCheats - Cheats for single-player
-Copyright 2004-2026
+SPCheats - Cheats for single-player without sv_cheats!
+Copyright 2026
 https://github.com/thecybermind/spcheats_qmm/
 3-clause BSD license: https://opensource.org/license/bsd-3-clause
 
