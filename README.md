@@ -1,10 +1,10 @@
 # SPCheats
-SPCheats - Cheats for single-player without sv_cheats!
-Copyright 2026
-https://github.com/thecybermind/spcheats_qmm/
+SPCheats - Cheats for single-player without sv_cheats!  
+Copyright 2026  
+https://github.com/thecybermind/spcheats_qmm/  
 3-clause BSD license: https://opensource.org/license/bsd-3-clause  
 
-Created By: Kevin Masterson < k.m.masterson@gmail.com >
+Created By: Kevin Masterson < k.m.masterson@gmail.com >  
 
 ---
 
