@@ -66,7 +66,7 @@ C_DLLEXPORT void QMM_Detach() {
 C_DLLEXPORT intptr_t QMM_vmMain(intptr_t cmd, intptr_t* args) {
 	if (cmd == GAME_INIT) {
 		// init msg
-		QMM_WRITEQMMLOG("SPCheats v" SPCHEATS_QMM_VERSION " by " SPCHEATS_QMM_BUILDER " is loaded\n", QMMLOG_INFO);
+		QMM_WRITEQMMLOG(QMMLOG_INFO, "SPCheats v" SPCHEATS_QMM_VERSION " by " SPCHEATS_QMM_BUILDER " is loaded\n");
 
 		// register cvars
 		g_syscall(G_CVAR_REGISTER, nullptr, "spcheats_version", SPCHEATS_QMM_VERSION, CVAR_ROM | CVAR_SERVERINFO);
