@@ -152,17 +152,17 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="$(Configuration.EndsWith('-Q2R'))==true">
     <ClCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);GAME_Q2R</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);GAME_Q2R;GAME_STR="Q2R"</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="$(Configuration.EndsWith('-Q3A'))==true">
     <ClCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);GAME_Q3A</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);GAME_Q3A;GAME_STR="Q3A"</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="$(Configuration.EndsWith('-QUAKE2'))==true">
     <ClCompile>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions);GAME_QUAKE2</PreprocessorDefinitions>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);GAME_QUAKE2;GAME_STR="QUAKE2"</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

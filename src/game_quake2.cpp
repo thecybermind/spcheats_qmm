@@ -41,22 +41,22 @@ gitem_t* FindItemByClassname(const char* classname) {
 }
 */
 
-intptr_t GAME_vmMain(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_vmMain(result_vars* results, intptr_t cmd, intptr_t* args) {
     QMM_RET_IGNORED(0);
 }
 
 
-intptr_t GAME_syscall(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_syscall(result_vars* results, intptr_t cmd, intptr_t* args) {
     QMM_RET_IGNORED(0);
 }
 
 
-intptr_t GAME_vmMain_Post(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_vmMain_Post(result_vars* results, intptr_t cmd, intptr_t* args) {
     QMM_RET_IGNORED(0);
 }
 
 
-intptr_t GAME_syscall_Post(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_syscall_Post(result_vars* results, intptr_t cmd, intptr_t* args) {
     // this is called near the end of PutClientInServer (respawn) and before ChangeWeapon().
     // this is also called in ClientThink regularly, so we check a few things to verify that this is a
     // respawn event and not during a regular Think
