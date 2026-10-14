@@ -20,12 +20,12 @@ Created By:
 #include "main.h"
 
 
-intptr_t GAME_vmMain(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_vmMain(result_vars* results, intptr_t cmd, intptr_t* args) {
     QMM_RET_IGNORED(0);
 }
 
 
-intptr_t GAME_syscall(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_syscall(result_vars* results, intptr_t cmd, intptr_t* args) {
 	if (cmd == G_GET_USERCMD) {
 		// this is a good place to hook when a player respawns.
 		// weird, i know, but if you look through ClientSpawn you'll
@@ -55,12 +55,12 @@ intptr_t GAME_syscall(intptr_t cmd, intptr_t* args) {
 }
 
 
-intptr_t GAME_vmMain_Post(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_vmMain_Post(result_vars* results, intptr_t cmd, intptr_t* args) {
     QMM_RET_IGNORED(0);
 }
 
 
-intptr_t GAME_syscall_Post(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_syscall_Post(result_vars* results, intptr_t cmd, intptr_t* args) {
 	QMM_RET_IGNORED(0);
 }
 

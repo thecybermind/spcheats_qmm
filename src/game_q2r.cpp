@@ -62,7 +62,7 @@ gitem_t* FindItemByClassname(const char* classname) {
 }
 */
 
-intptr_t GAME_vmMain(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_vmMain(result_vars* results, intptr_t cmd, intptr_t* args) {
     // we use G_INFO_VALUEFORKEY with a key of "fov" to determine if a user has respawned. but that is also checked
     // inside ClientUserinfoChanged. so we set a flag to ignore it in GAME_CLIENT_USERINFO_CHANGED and clear in _Post
     if (cmd == GAME_CLIENT_USERINFO_CHANGED) {
@@ -73,7 +73,7 @@ intptr_t GAME_vmMain(intptr_t cmd, intptr_t* args) {
 }
 
 
-intptr_t GAME_syscall(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_syscall(result_vars* results, intptr_t cmd, intptr_t* args) {
     // this is called with "fov" as key in PutClientInServer after initialization and before ChangeWeapon.
     // this is also called in ClientUserinfoChanged but we ignore that one
     if (cmd == G_INFO_VALUEFORKEY && !s_in_client_userinfo_changed && QMM_GETINTCVAR("spcheats_enabled")) {
@@ -149,7 +149,7 @@ intptr_t GAME_syscall(intptr_t cmd, intptr_t* args) {
 }
 
 
-intptr_t GAME_vmMain_Post(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_vmMain_Post(result_vars* results, intptr_t cmd, intptr_t* args) {
     // we use G_INFO_VALUEFORKEY with a key of "fov" to determine if a user has respawned. but that is also checked
     // inside ClientUserinfoChanged. so we set a flag to ignore it in GAME_CLIENT_USERINFO_CHANGED and clear in _Post
     if (cmd == GAME_CLIENT_USERINFO_CHANGED) {
@@ -160,7 +160,7 @@ intptr_t GAME_vmMain_Post(intptr_t cmd, intptr_t* args) {
 }
 
 
-intptr_t GAME_syscall_Post(intptr_t cmd, intptr_t* args) {
+intptr_t GAME_syscall_Post(result_vars* results, intptr_t cmd, intptr_t* args) {
     QMM_RET_IGNORED(0);
 }
 
